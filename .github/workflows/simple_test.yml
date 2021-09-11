@@ -3,7 +3,7 @@ on:
 
 jobs:
   show_current_refs:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - run : |
           echo "$GITHUB_REF"
