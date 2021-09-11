@@ -4,6 +4,7 @@ on:
 
 jobs:
   show_current_refs:
+    name: Show Current Environment Variables
     runs-on: ubuntu-latest
     steps:
       - run : |
