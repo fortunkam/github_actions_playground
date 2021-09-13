@@ -1,0 +1,19 @@
+name: Manual Environment Variable Test
+on:
+  workflow_dispatch:
+
+jobs:
+  create_issue:
+    name: Create a GitHub issue
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@0.8.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: Script created issue 🖖
+              body: "🎉 You've created this issue comment using GitHub Script!!!"
+            });
