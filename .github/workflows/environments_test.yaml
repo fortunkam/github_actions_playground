@@ -16,8 +16,8 @@ jobs:
       - shell: bash
         run: echo "Hello ${{ secrets.GREETING }}, ${{ github.events.inputs.name }}"
 
-jobs:
   deploy_prod:
+    needs: deploy_dev
     runs_on: ubuntu_latest
     environment: prod
     steps:
