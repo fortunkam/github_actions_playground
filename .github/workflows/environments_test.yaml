@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy_dev:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
     environment: dev
     steps:
       - shell: bash
@@ -18,7 +18,7 @@ jobs:
 
   deploy_prod:
     needs: deploy_dev
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
     environment: prod
     steps:
       - shell: bash
